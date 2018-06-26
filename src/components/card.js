@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Input from './input';
+import Content from './content';
 
 class Card extends Component {
 
@@ -31,7 +32,6 @@ constructor() {
 
 handleInputChange(event) {
     this.setState({ [event.target.name]: event.target.value })
-    console.log(this.state);
 }
 
     render() {
@@ -63,6 +63,7 @@ handleInputChange(event) {
                 {
                     inputData.map(data => Input( (data), this.handleInputChange ))
                 }
+                <Content data={this.state}/>
             </div>
         )
     }
