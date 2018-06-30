@@ -1,3 +1,15 @@
+@mixin button {
+    height: 50px;
+        width: 300px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.01);
+        color: white;
+        font-family: 'Montserrat';
+        font-size: 22px;
+        text-align: center;
+}
+
+
 .home {
     position: relative;
 
@@ -79,6 +91,40 @@
         justify-items: center;
         align-items: center;
     }
+
+    button:focus{
+        outline: none;
+    }
+    button {
+        justify-self: center;
+        transform: translateY(50%);
+    }
+
+    &__generate {
+        background-color: #00cb79;
+        @include button;
+    }
+    &__clear {
+        background-color: #45b0e5;
+        @include button;
+    }
+
+    &__content {
+        width: 1100px;
+        height: 297px;
+        background-color: #f2f2f2;
+
+        justify-self: center;
+        margin-bottom: 84px;
+
+        p {
+            line-height: 29px;
+            padding: 50px 47px;
+            font-family: 'Montserrat';
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
 }
 
 .input {
@@ -100,6 +146,7 @@
         font-weight: 300;
 
     }
+
     input {
         grid-column: input-s/input-e;
 
